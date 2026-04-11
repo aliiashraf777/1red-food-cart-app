@@ -1,6 +1,6 @@
 import { createContext, useState } from 'react'
 import { food_items } from '../constants/foodItems';
-
+ 
 
 export const dataContext = createContext()
 
