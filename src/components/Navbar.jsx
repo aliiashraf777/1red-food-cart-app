@@ -6,7 +6,7 @@ import { dataContext } from "../context/UserContext";
 import { food_items } from "../constants/foodItems";
 import { useSelector } from "react-redux";
 import { selectCartItems } from "../redux/cartSlice";
- 
+  
 const Navbar = () => {
 
     let { input, setInput, cate, setCate, showCart, setShowCart } = useContext(dataContext);
