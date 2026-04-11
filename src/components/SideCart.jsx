@@ -5,7 +5,7 @@ import CartCard from './CartCard'
 import { useDispatch, useSelector } from 'react-redux'
 import { cartReducerActions, selectCartBilling, selectCartItems } from '../redux/cartSlice'
 import { toast, Zoom } from 'react-toastify'
- 
+  
 const SideCart = () => {
 
     const { showCart, setShowCart } = useContext(dataContext)
