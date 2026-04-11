@@ -41,7 +41,7 @@ const Categories = [
         icon: GiHamburger,
     },
 ]
- 
+  
 const Category = ({ filter }) => {
 
     return (
