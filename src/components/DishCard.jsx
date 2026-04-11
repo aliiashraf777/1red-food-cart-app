@@ -4,7 +4,7 @@ import { cartReducerActions, selectCartItems } from "../redux/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 const DishCard = ({ id, name, category, type, image, price }) => {
-
+ 
     const dispatch = useDispatch();
  
     const items = useSelector(selectCartItems);
