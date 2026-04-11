@@ -1,0 +1,27 @@
+@import 'tailwindcss';
+
+@layer base {
+    .flex_center {
+        @apply flex justify-center items-center
+    }
+
+    .flex_between {
+        @apply flex justify-between items-center
+    }
+
+    .flex_col_center {
+        @apply flex flex-col justify-center items-center
+    }
+
+    .flex_col_end {
+        @apply flex flex-col justify-center items-end
+    }
+
+    .transition_300 {
+        @apply transition-all duration-300
+    }
+
+    .transition_200 {
+        @apply transition-all duration-200
+    }
+}
