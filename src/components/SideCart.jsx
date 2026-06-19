@@ -5,7 +5,7 @@ import CartCard from './CartCard'
 import { useDispatch, useSelector } from 'react-redux'
 import { cartReducerActions, selectCartBilling, selectCartItems } from '../redux/cartSlice'
 import { toast, Zoom } from 'react-toastify'
-  
+
 const SideCart = () => {
 
     const { showCart, setShowCart } = useContext(dataContext)
@@ -85,17 +85,10 @@ const SideCart = () => {
 
                         <button
                             className="w-full p-3 rounded-md bg-green-300 hover:bg-green-500 text-black hover:text-white font-medium capitalize cursor-pointer transition duration-300 active:scale-95"
-                            onClick={() => toast.success('Order placed...!', {
-                                position: "top-center",
-                                autoClose: 3000,
-                                hideProgressBar: false,
-                                closeOnClick: false,
-                                pauseOnHover: true,
-                                draggable: true,
-                                progress: undefined,
-                                theme: "light",
-                                transition: Zoom,
-                            })}
+                            onClick={() => {
+                                dispatch(cartReducerActions.orderPlaced())
+                                dispatch(cartReducerActions.clearCart())
+                            }}
                         >
                             Place Order
                         </button>

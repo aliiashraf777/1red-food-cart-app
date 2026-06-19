@@ -41,8 +41,8 @@ const Categories = [
         icon: GiHamburger,
     },
 ]
-  
-const Category = ({ filter }) => {
+
+const Category = ({ filterCate }) => {
 
     return (
         <div className="w-full flex justify-center md:justify-center items-center gap-3 md:gap-5 flex-wrap px-4 md:px-0">
@@ -54,7 +54,7 @@ const Category = ({ filter }) => {
                         <div
                             key={idx}
                             className="w-[70px] md:w-24 h-[70px] md:h-24 bg-white rounded-md flex flex-col items-center justify-center gap-2 md:gap-3.5 p-2 md:p-3.5 shadow-xl cursor-pointer active:scale-95 border border-transparent hover:border-green-300 transition-all duration-300 hover:bg-green-100 group"
-                            onClick={() => filter(category.name)}
+                            onClick={() => filterCate(category.name)}
                         >
                             <div className="text-green-500 text-[22px] md:text-[32px]">
                                 {/* <Icon md:size={32} /> */}

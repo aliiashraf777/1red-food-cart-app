@@ -70,6 +70,19 @@ export const cartReducerSlice = createSlice({
                 theme: "light",
                 transition: Zoom,
             });
+        },
+        orderPlaced: () => {
+            toast.success('Order placed...!', {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                transition: Zoom,
+            })
         }
     }
 })
@@ -95,7 +108,7 @@ export const selectCartItems = createSelector(
 // memoized 
 // export const selectSubTotalPrice = createSelector(
 //     [selectCartItems],
-// (items) => items.reducer(
+// (items) => (
 //     (items) => items.reduce(
 //         (total, item) => total + item.price * item.qty, 0
 //     )

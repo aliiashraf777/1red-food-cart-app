@@ -53,6 +53,7 @@ const DishCard = ({ id, name, category, type, image, price }) => {
                         name: name,
                         price: price,
                         image: image,
+                        category: category,
                         qty: 1
                     }))
                     dispatch(cartReducerActions.itemAddedToast())

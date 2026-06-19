@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react'
 import Category from '../components/Category'
 import Navbar from '../components/Navbar'
-import { food_items } from '../constants/foodItems' 
+import { food_items } from '../constants/foodItems'
 import { dataContext } from '../context/UserContext'
 import SideCart from '../components/SideCart'
 import DishCard from '../components/DishCard'
@@ -11,7 +11,7 @@ const Home = () => {
     // const [cate, setCate] = useState(food_items);
 
     const { cate, setCate, input } = useContext(dataContext);
-
+ 
     const filterCate = (category) => {
         if (category === 'All') {
             setCate(food_items);
@@ -27,7 +27,7 @@ const Home = () => {
             <Navbar />
 
             {!input &&
-                <Category filter={filterCate} />
+                <Category filterCate={filterCate} />
             }
 
             {/* dishes cards */}
